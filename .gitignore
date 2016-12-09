@@ -1,3 +1,5 @@
+#backup
+*.save
 # Logs
 logs
 *.log
