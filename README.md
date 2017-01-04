@@ -29,7 +29,7 @@ For example: 30 second per Step:
 120: Job8...
 
 
-when the STEP on an index, then execute the jobs in Calendar, No need to run SQL EVERY Time.
+when the STEP on an index, then execute the jobs in Calendar, No need to run SQL *EVERY Time*.
 
 2. BUT!, the Jobs Updating in DATABASE must be synced to the Calendar.
 
