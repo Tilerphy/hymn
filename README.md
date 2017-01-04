@@ -17,9 +17,13 @@ Now:
 1. Use SQL too, but cache the job into a STEPs Calendar.
 
 | 0 | 30 | 60 | 90 | 120 | ....
+
 |job|job |job |job | job | ....
+
 |job|job |job |    | job | ....
+
 |job|job |job |    |     | ....
+
 
 when the STEP on an index, then execute the jobs in Calendar, No need to run SQL EVERY Time.
 
