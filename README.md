@@ -19,10 +19,15 @@ Now:
 For example: 30 second per Step:
 
 0 : Job1, Job2, Job3, Job4...
+
 30: Job5, Job10 ...
+
 60: Job6, Job7 ...
+
 90:
+
 120: Job8...
+
 
 when the STEP on an index, then execute the jobs in Calendar, No need to run SQL EVERY Time.
 
