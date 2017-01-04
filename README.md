@@ -1,4 +1,4 @@
-
+ 
 # symphony
 scheduler Stepper
 
@@ -8,7 +8,7 @@ A way to reduce the cost of calculating nexttime of all jobs.
 
 Before:
 
-Use SQL, may be `SELECT JobId, JobName, JobNextTime, JobAction, IsFinished from Jobs where JobNextTime < 123456789 and JobNextTime > 12345`, to find all jobs those need to run ***EVERY STEP***.
+Use SQL, may be `SELECT JobId, JobName, JobNextTime, JobAction, IsFinished from Jobs where JobNextTime < 123456789 and JobNextTime > 12345`, to find all jobs those need to run ***EVERY STEP*** (calculate all nexttime in database every step.).
 
 Then ask worker to execute the jobs.
 
