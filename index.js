@@ -12,28 +12,37 @@ var SESSION = {
     nextPoint : 0,
 };
 
-function initPoint(startTime) {
+function checkPoint(startTime) {
             var now = Date.now();
             var point = CONFIG.rhythm * parseInt((now - startTime)/CONFIG.rhythm);
             SESSION.currentPoint = point;
             SESSION.nextPoint = point + CONFIG.rhythm;
-            return point;
+            return [point, now];
 }
 
 var conductor = function(){
    
 
     ///get the floor
-    this.startPoint = parseInt(Date.now()/CONFIG.duration);
-    this.startTime = this.startPoint * CONFIG.duration;
+    this.reset = ()=>{
+        this.startPoint = parseInt(Date.now()/CONFIG.duration);
+        this.startTime = this.startPoint * CONFIG.duration;
+    };
+    
     //init point
-    initPoint(this.startTime);
+    this.reset();
+    checkPoint(this.startTime);
     this.setMetronome = (metronome)=>{
         
         this.metronome = metronome;
         this.metronome.on("step", ()=>{
             
-            var point = initPoint(this.startTime);
+            var current = checkPoint(this.startTime);
+            var point = current[0];
+            if (point == CONFIG.duration) {
+                this.reset();
+                console.log("a");
+            }
             console.log(`point is : ${point}, opern: ${Object.keys(this.opern.chords)}`);
             if (this.opern.chords) {
                 var chords = this.opern.chords;
@@ -53,6 +62,7 @@ var conductor = function(){
         });
         return this;
     };
+    
     this.setOpern=(opern)=>{
         this.opern = opern;
         this.opern.startTime = this.startTime;
