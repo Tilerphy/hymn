@@ -41,7 +41,6 @@ var conductor = function(){
             var point = current[0];
             if (point == CONFIG.duration) {
                 this.reset();
-                console.log("a");
             }
             console.log(`point is : ${point}, opern: ${Object.keys(this.opern.chords)}`);
             if (this.opern.chords) {
