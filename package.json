@@ -1,0 +1,29 @@
+{
+  "name": "symphony",
+  "version": "1.0.0",
+  "description": "Split a day into 2880 cells then step each cell and run job in it.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tilerphy/symphony.git"
+  },
+  "keywords": [
+    "timer",
+    "schedule",
+    "scheduler",
+    "tasks",
+    "task"
+  ],
+  "author": "Tilerphy",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Tilerphy/symphony/issues"
+  },
+  "homepage": "https://github.com/Tilerphy/symphony#readme"
+}
