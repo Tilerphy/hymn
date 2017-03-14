@@ -32,3 +32,7 @@ BUT! the Jobs Updating in DATABASE must be synced to the Calendar.
 
 
 # However, Use the Memory to exchange CPU (Maybe include Network IO/DataBase Memory/DataBase Space).
+
+#Run this for test
+
+https://github.com/Tilerphy/symphony/blob/master/test/test.js
