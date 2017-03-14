@@ -1,4 +1,4 @@
-var entry = require(".");
+var entry = require("symphony-task");
 var c = new entry.conductor();
 var m = new entry.metronome();
 var opern = new entry.opern();
